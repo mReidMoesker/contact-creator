@@ -101,7 +101,7 @@ function listContacts(contact) {
   contactElement.appendChild(writeEmail);
 
   const writeAddress = document.createElement('p');
-  writeAddress.textContent = `Address: ${contact.address}`;
+  writeAddress.textContent = `City: ${contact.address}`;
   contactElement.appendChild(writeAddress);
 
   contactElement.addEventListener('click', function() {
