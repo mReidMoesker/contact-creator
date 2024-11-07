@@ -83,7 +83,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
     emailInput.value = '';
     addressInput.value = '';
   } catch (error) {
-    
+    usernameInput.focus();
   }
 });
 
@@ -101,8 +101,10 @@ function listContacts(contact) {
   contactElement.appendChild(writeEmail);
 
   const writeAddress = document.createElement('p');
-  writeAddress.textContent = `City: ${contact.address}`;
+  writeAddress.textContent = `Address: ${contact.address}`;
   contactElement.appendChild(writeAddress);
+  // I can't remember if we learned appendChild in class or not, but I read about it a few years ago
+  // I'm not sure how I remember it, but the book was called "Get Coding!" and I read it at 15 years
 
   contactElement.addEventListener('click', function() {
     contactElement.remove();
