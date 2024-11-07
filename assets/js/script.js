@@ -77,7 +77,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
 
     contacts.push(contact);
 
-    addContact(contact);
+    listContacts(contact);
 
     usernameInput.value = '';
     emailInput.value = '';
@@ -87,7 +87,7 @@ document.querySelector('form').addEventListener('submit', function(event) {
   }
 });
 
-function addContact(contact) {
+function listContacts(contact) {
   
   const contactElement = document.createElement('div');
   contactElement.classList.add('contact');
